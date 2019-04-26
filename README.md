@@ -1,2 +1,2 @@
-<p align="center"><strong>This is a centered caption for the image</strong><p align="center">
+<p align="center"><strong>Bonk.io Football League</strong><p align="center">
 
