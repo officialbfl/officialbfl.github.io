@@ -1,4 +1,4 @@
-<h align="center>
+<h3 align="center>
   Bonk.io Football League
 </h3>
 <p align="center">
