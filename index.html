@@ -43,73 +43,32 @@ Click me to display Date and Time.</button>
 <p id="demo"></p>
 
             
-            <!-- saved from url=(0021)file:///I:/timer.html -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Countdown</title>
+            <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+
+<title> HTML5 page </title>
+
+</head>
+<body>
+
+<form>
+<textarea id="words" rows="10" cols="20">Enter comment</textarea>
+<input type="button" onclick="getwords()" value="Enter" /> <br>
+<p id="para"></p>
+</form>
+
 <script type="text/javascript">
-// set minutes
-var mins = 3;
- 
-// calculate the seconds (don't change this! unless time progresses at a different speed for you...)
-var secs = mins * 60;
-function countdown() {
-	setTimeout('Decrement()',1000);
-}
-function Decrement() {
-	if (document.getElementById) {
-		minutes = document.getElementById("minutes");
-		seconds = document.getElementById("seconds");
-		// if less than a minute remaining
-		if (seconds < 59) {
-			seconds.value = secs;
-		}
-                else {
-			minutes.value = getminutes();
-			seconds.value = getseconds();
-		}
-                if(mins<2)
-                    {
-                        minutes.style.color="red";
-                        seconds.style.color="red";
-                    }
-                 if(mins<0)
-                 {
-alert('time up');
-document.forms["s"].submit();
-//location.href = "index.jsp";
-minutes.value=0;
-seconds.value=0;
-                 }
-                 else
-                     {
-		secs--;
-		setTimeout('Decrement()',1000);
-                     }
-            }
-}
-function getminutes() {
-	// minutes is seconds divided by 60, rounded down
-	mins = Math.floor(secs / 60);
-       
-	return mins;
-}
-function getseconds() {
-	// take mins remaining (as seconds) away from total seconds remaining
-	return secs-Math.round(mins *60);
+function getwords() {
+  text = words.value;
+  document.getElementById("para").innerHTML += '<p>'+text
+  document.getElementById("words").value = "enter"
 }
 </script>
-</head>
-<body onload="countdown();">
- 
-<div>
-    Time left <input id="minutes" type="text" style="width: 10px; border: none; font-size: 16px; font-weight: bold; color: black;"><font size="5"> :</font><input id="seconds" type="text" style="width: 20px; border: none; font-size: 16px; font-weight: bold; color: black;"> 
-</div>
-    <form action="file:///I:/index.jsp" id="s">
-        
-    </form>
 
-</body></html>
-
+</body>
+</html>
             
             
             <font color="ffffff"><h5 style="position: absolute; top:195px; left:110px; width:250px;"><i>Welcome to the Bonk.io - Football League. It was estabished in November 2017 and we are now in our 3rd season. We organize 3v3 and 1v1 League. Our community contains players all around the world. Our aim is to provide best experience possible for playing Bonk.io Football at a competitive level.</i></h5></font>
